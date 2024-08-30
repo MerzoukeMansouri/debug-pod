@@ -36,5 +36,5 @@ start_debug_pod() {
     local selected_namespace=$1
     local selected_pod=$2
     local debug_image=$3
-    kubectl debug -n "$selected_namespace" "$selected_pod" -it --image="$debug_image"   
+    kubectl debug -n "$selected_namespace" "$selected_pod" -it --image="$debug_image" --share-processes
 }
